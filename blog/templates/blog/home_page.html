@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg col-md-12">
+        <div class="article-list">
+            {% for article in articles %}
+            <div class="article">
+                <h1 class="article-title">
+                    <a href="{% url 'article_page' slug=article.slug %}">{{ article.title | safe }}</a>
+                </h1>
+                <div class="article-text">{{ article.content | safe }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

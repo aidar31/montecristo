@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}{{ author_name }}: {{article.title | safe}} {% endblock %}
+
+
+{% block page_header %}
+<a href="{% url 'home_page' %}">
+    <img src="{% static 'img/avatar.jpeg' %}">
+    <span class="author_name">{{ author_name }}</span>
+</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12 col-lg-8">
+        <div class="article">
+            <h1 class="article-title">{{ article.title | safe }}</h1>
+            <div class="article-text">{{ article.content | safe }}</div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
