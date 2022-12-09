@@ -1,6 +1,8 @@
 # Montecristo - Django blog.
 This is a blog made with Python/Django.
 
+### Todo
+  1. Create tags system.
 
 
 # Screenshot
